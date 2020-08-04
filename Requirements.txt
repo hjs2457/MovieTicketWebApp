@@ -1,0 +1,28 @@
+
+In this project you will create a web application for a movie theater.
+
+
+Application requirements:
+
+  1. List theaters for a zipcode.
+  2. List movies for a theater.
+  3. View description of a movie.
+  4. List times for a movie.
+  5. Purchase tickets for a movie time.
+     Assumptions:
+       Infinite seats.
+       Each ticket is $10.
+       Payment system is simulated (no real payment system).
+       All card charges are approved.
+  6. Validations:
+       Zipcode - 5 digits
+       Credit card - 16 digits
+
+
+
+Infrastructure requirements:
+
+   Web:  JSF preferred, JSP or Servlets permitted.
+   Database: EJB/JPA preferred, JDBC permitted.
+
+   The database should be named MovieDB. 

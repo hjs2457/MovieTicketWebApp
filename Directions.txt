@@ -1,0 +1,17 @@
+First create MovieDB in NetBeans with scott tiger and run the sql script
+Open the project in NetBeans and make sure you update the persistance file to connect to MovieDB and it should deploy and run
+
+working zipcodes - number of theaters each
+75075 - 2
+75093 - 2
+75067 - 2
+75225 - 1
+75208 - 1
+75254 - 2
+
+a credit card for you to test:
+1111111111111111
+01/25
+111
+
+

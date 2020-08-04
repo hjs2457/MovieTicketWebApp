@@ -1,0 +1,63 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:c="http://xmlns.jcp.org/jsp/jstl/core">
+    <h:head>
+        <title>Home</title>
+        <style>
+            html{
+                height: 100%;
+                background-color: rgb(92, 7, 1);
+                margin: 0;
+            }
+            body{
+                overflow: auto;
+                height: 100%;
+                background-color: white;
+                padding: 0;
+                max-width: 800px;
+                width: 80%;
+                margin: 20px auto;
+                padding: 20px;
+            }
+            h1{
+                text-align: center;
+                font-family: Impact, Charcoal, sans-serif;
+            }
+            h3{
+                font-family: Impact, Charcoal, sans-serif;
+            }
+            .te{
+                font-family: Impact, Charcoal, sans-serif;
+            }
+            img{
+                width: 30%;
+                float: left;
+                margin: 1.66%;
+                height: 350px;
+            }
+        </style>
+    </h:head>
+    <h:body>
+        <h1>Henry's and Mayowa's Ticketing App</h1>
+        <h3>Enter zipcode below to find a theater</h3>
+        <h:form>
+            <h:outputLabel class="te" value="Zipcode: "/>
+            <h:inputText value="#{showZipcodeBean.zipcode}" maxlength="5" required="true" converterMessage=""/>                                  
+            <h:commandButton value="Show Theaters" action="#{showZipcodeBean.showZipcode(showZipcodeBean.zipcode)}"/>
+        </h:form>
+        <br/><br/><br/>
+        <h1>
+            In Theaters Now
+        </h1>
+        <img src="https://originalvintagemovieposters.com/wp-content/uploads/2020/03/Dark-Knight-70822-scaled.jpg"/>
+        <img src="https://starwarsblog.starwars.com/wp-content/uploads/2019/10/rise-of-skywalker-theatrical-poster.jpg"/>
+        <img src="https://images-na.ssl-images-amazon.com/images/I/91qmrdkBViL._AC_SL1500_.jpg"/>
+        <h1>
+            ...And More
+        </h1>
+    </h:body>
+</html>
+

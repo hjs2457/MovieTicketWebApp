@@ -1,0 +1,62 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+    <h:head>
+        <title>Approve</title>
+        <style>
+            html{
+                height: 100%;
+                background-color: rgb(92, 7, 1);
+            }
+            body{
+                min-height: 100%;
+                height: 100%;
+                background-color: white;
+                padding: 20px 20px 20px 20px;
+                max-width: 800px;
+                width: 80%;
+                margin: 20px auto;
+                font-family: Impact, Charcoal, sans-serif;
+            }
+            .div1{
+                font-size: 32px;
+                text-align: center;
+                font-family: Impact, Charcoal, sans-serif;
+                font-weight: 200px;
+            }
+            .hb{
+                margin-left: 50%;
+            }
+        </style>
+    </h:head>
+    <h:body>
+        <div class="div1">
+            Thank you for your purchase
+        </div>
+        <div class="div1">
+            Here is your digital receipt
+        </div>
+        <br/><br/><br/>
+        <h:form>
+            <h:outputText value="#{paymentBean.theater.name}"/><br/>
+            <h:outputText value="#{paymentBean.theater.location}"/><br/>
+            <h:outputText value="#{paymentBean.theater.address}, #{paymentBean.theater.zipcode}"/><br/>
+            <br/>
+            <h:outputText value="#{paymentBean.movie.title}"/><br/>
+            <h:outputText value="#{paymentBean.movie.rating} "/>
+            <h:outputText value="#{paymentBean.movie.length}"/><br/>
+            <br/>
+            <h:outputText value="#{paymentBean.showday}"/><br/>
+            <h:outputText value="#{paymentBean.time}"/><br/>
+            <br/>
+            <h:outputText value="Number of Tickets purchased: #{paymentBean.numTickets} for $10.00 each"/><br/>
+            <h:outputText value="Total amount charged: $#{paymentBean.price}.00"/><br/>
+            <br/>
+            <div class="hb">
+                <h:commandButton value="Home" action="MainPage"/>
+            </div>
+        </h:form>
+    </h:body>
+</html>
+

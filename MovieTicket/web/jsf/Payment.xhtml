@@ -1,0 +1,111 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:c="http://xmlns.jcp.org/jsp/jstl/core"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>Payment</title>
+        <style>
+            html{
+                height: 100%;
+                background-color: rgb(92, 7, 1);
+            }
+            body{
+                min-height: 100%;
+                height: 100%;
+                background-color: white;
+                padding: 20px 20px 20px 20px;
+                max-width: 800px;
+                width: 80%;
+                margin: 20px auto;
+            }
+            .div1{
+                font-size: 32px;
+                text-align: center;
+                font-family: Impact, Charcoal, sans-serif;
+            }
+            .left {
+                float: left;
+                width: 50%;
+                text-align: center;
+            }
+            .right {
+                float: left;
+                width: 50%;
+                text-align: center;
+            }
+            .leftright{
+                width: 650px;
+                margin: 0 auto 0 auto;
+                border: 2px solid rgb(92, 7, 1);
+            }
+            a:hover {
+                background-color: #ddd;
+                color: black;
+            }
+            .previous {
+                background-color: #f1f1f1;
+                color: black;
+            }
+            .next {
+                background-color: #4CAF50;
+                color: white;
+            }
+            .round {
+                border-radius: 50%;
+            }
+            .text{
+                font-family: Impact, Charcoal, sans-serif;
+            }
+        </style>
+    </h:head>
+    <h:body>
+        <br/>
+        <div class="div1">
+            Please enter your payment information and ticket count
+        </div>
+        <br/>
+        <br/>
+        <div class="left">
+            <h:form>
+                <h:outputLabel class="text" value="Credit card number"/><br/>
+                <h:inputText value="#{paymentBean.number}"/><br/>
+                <br/>
+                <h:outputLabel class="text" value="Expiration date"/><br/>
+                <h:inputText value="#{paymentBean.expdate}"/><br/>
+                <br/>
+                <h:outputLabel class="text" value="Security code"/><br/>
+                <h:inputText value="#{paymentBean.securitycode}"/><br/>
+                <br/>
+                <h:outputLabel class="text" value="Number of tickets"/><br/>
+                <h:inputText value="#{paymentBean.numTickets}" converterMessage=""/><br/>
+                <br/>
+                <h:outputLabel class="text" value="Show day"/><br/>
+                <h:inputText value="#{paymentBean.showday}" converterMessage=""/><br/>
+                <br/><br/>
+                <h:commandButton value="Submit" action="#{paymentBean.validate()}"/><br/>
+                <h:outputText value="#{paymentBean.result}"/><br/>
+                <div class="bb">
+                    <h:commandButton value="Back" action="ShowTheater"/>
+                </div>
+            </h:form>
+        </div>
+        <div class="right text">
+            <h:form>
+                <h:outputText value="#{paymentBean.theater.name}"/><br/>
+                <h:outputText value="#{paymentBean.theater.location}"/><br/>
+                <h:outputText value="#{paymentBean.theater.address}, #{paymentBean.theater.zipcode}"/><br/>
+                <br/><br/>
+                <h:outputText value="#{paymentBean.movie.title}"/><br/>
+                <h:outputText value="#{paymentBean.movie.rating} - "/>
+                <h:outputText value="#{paymentBean.movie.length}"/><br/>
+                <h:outputText value="#{paymentBean.time}"/><br/>
+                <br/><br/>
+                <h:outputText value="Each ticket is $10.00"/><br/>
+            </h:form>
+        </div>
+        <br/>
+    </h:body>
+</html>
+
